@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Lexend:wght@300&display=swap');
+
+/**
+font-family: 'Comfortaa', cursive;
+font-family: 'Lexend', sans-serif;
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/fondooxido.jpg);
+}
+
+.container-grid{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 7fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.logo img{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: -38px;
+}
+
+.logo{
+    display: flex;
+    grid-area: logo;
+}
+
+header{
+    background: rgba(255,255,255,0.25);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 0px;
+    padding: 10px 20px 10px 20px;
+    margin: 40px 50px 40px 50px;
+    grid-area: header;
+}
+
+.nav-bar a{
+    color: black;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: titulos;
+}
+
+ul li{
+    list-style: none;
+}
+
+.container-header{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo titulos";
+    align-items: center;
+}    
+
+.spotify{
+    background: rgba(255,255,255,0.25);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 0px;
+    height: 90px;
+    width: 280px;
+    margin: 10px 10px 10px 50px;
+    border: 1px solid gray;
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    display: flex;
+    gap: 30px;
+}
+
+.spotify img{
+    width: 60px;
+    height: 60px;
+    display: flex;
+}
+
+.container-spotify{
+    display: flex;
+    align-items: center;
+}
+
+
+footer{
+    background: rgba(255,255,255,0.25);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 0px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 50px 10px 50px;
+    grid-area: footer;
+}
+
+.container-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ubicacion redes";
+}
+
+.ubicacion img{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ubicacion a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ubicacion{
+    grid-area: ubicacion;
+    display: flex;
+}
+
+.redes{
+    color: black;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    grid-area: redes;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes img{
+    width: 25px;
+    height: 25px;
+}
+
+main{
+    grid-area: main;
+}
+
+.menu img{
+    width: 270px;
+    height: 200px;
+}
+
+.menu a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu{
+    margin: 50px;
+}
+
+.container-menu{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "menu1 menu2 menu3 menu4"
+    "menu5 menu6 menu7 menu8"
+    "none menu9 menu10 none"
+    ;
+}
+
+.menu-1{
+    grid-area: menu1;
+}
+.menu-2{
+    grid-area: menu2;
+}
+.menu-3{
+    grid-area: menu3;
+}
+.menu-4{
+    grid-area: menu4;
+}
+.menu-5{
+    grid-area: menu5;
+}
+.menu-6{
+    grid-area: menu6;
+}
+.menu-7{
+    grid-area: menu7;
+}
+.menu-8{
+    grid-area: menu8;
+}
+.menu-9{
+    grid-area: menu9;
+}
+.menu-10{
+    grid-area: menu10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nuestras-cervezas img{
+    width: 410px;
+    height: 580px;
+    margin: 50px;
+}
+
+.galeria img{
+    width: 400px;
+    height: 300px;
+}
+
+.galeria a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.galeria{
+    margin: 50px;
+}
+
+.fotos-galeria img{
+    width: 400px;
+    height: 300px;
+}
+
+.texto-nosotros{
+    background: rgba(255,255,255,0.25);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 0px;
+    padding: 20px 20px 20px 20px;
+    margin: 50px 300px 50px 300px;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.horarios-slogan{
+    margin: 50px 250px 50px 250px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.formulario{
+    margin: 50px 250px 50px 250px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.opinion a{
+    background: rgba(255,255,255,0.25);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 0px;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.opinion{
+    margin: 100px 400px 100px 400px;
+}
