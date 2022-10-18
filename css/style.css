@@ -32,7 +32,7 @@ body{
     width: 200px;
     height: 150px;
     position: absolute;
-    top: -38px;
+    top: -48px;
 }
 
 .logo{
@@ -118,7 +118,6 @@ ul li{
     align-items: center;
 }
 
-
 footer{
     background: rgba(255,255,255,0.25);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
@@ -184,8 +183,8 @@ main{
 }
 
 .menu img{
-    width: 270px;
-    height: 200px;
+    width: 215px;
+    height: 150px;
 }
 
 .menu a{
@@ -193,25 +192,96 @@ main{
     text-decoration: none;
     color: white;
     font-family: 'Comfortaa', cursive;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .menu{
-    margin: 50px;
+    margin: 20px 50px 20px 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.burgers{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.papas{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sandwiches{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parapicar{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.platos{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ensaladas{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pizzetas{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tablas{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tragos{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bebidasycafeteria{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container-menu{
     display: grid;
     width: 100%;
     height: 100vh;
-    
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
     "menu1 menu2 menu3 menu4"
     "menu5 menu6 menu7 menu8"
-    "none menu9 menu10 none"
+    "none menu9 menu10 non"
     ;
 }
 
@@ -246,28 +316,21 @@ main{
     grid-area: menu10;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nuestras-cervezas img{
     width: 410px;
     height: 580px;
-    margin: 50px;
+}
+
+.nuestras-cervezas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 50px 50px 50px;
 }
 
 .galeria img{
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
 }
 
 .galeria a{
@@ -280,12 +343,85 @@ main{
 }
 
 .galeria{
-    margin: 50px;
+    margin: 20px 50px 20px 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 .fotos-galeria img{
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 150px;
+    margin: 50px 50px 0px 50px;
+}
+
+.container-galeria{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "galeria1 galeria2"
+    "galeria3 galeria4"
+    ;
+}
+
+.galeria-1{
+    grid-area: galeria1;
+}
+
+.galeria-2{
+    grid-area: galeria2;
+}
+
+.galeria-3{
+    grid-area: galeria3;
+}
+
+.galeria-4{
+    grid-area: galeria4;
+}
+
+.tragosycervezas{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.comidas{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ustedes{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.laestacion{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 10% 20% 20% 10%;
+    grid-template-areas: 
+    "texto"
+    "horarios"
+    "formulario"
+    "opinion"
+    "slogan"
+    ;
 }
 
 .texto-nosotros{
@@ -294,32 +430,58 @@ main{
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
     border-radius: 0px;
-    padding: 20px 20px 20px 20px;
-    margin: 50px 300px 50px 300px;
+    padding: 20px;
+    margin: 50px 10px 50px 10px;
     color: black;
     font-family: 'Comfortaa', cursive;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     border: 1px solid gray;
+    height: 150px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 25px;
+    grid-area: texto;
+    justify-self: center;
 }
 
-.horarios-slogan{
-    margin: 50px 250px 50px 250px;
+.horarios{
+    margin: 50px 10px 50px 10px;
     color: white;
     font-family: 'Comfortaa', cursive;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    grid-area: horarios;
+    justify-self: center;
+    align-self: center;
+}
+
+.slogan{
+    margin: 50px 10px 50px 10px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    grid-area: slogan;
+    justify-self: center;
+    align-self: center;
 }
 
 .formulario{
-    margin: 50px 250px 50px 250px;
+    margin: 50px 10px 50px 10px;
     color: white;
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    grid-area: formulario;
+    justify-self: center;
+    align-self: center;
 }
 
 .opinion a{
@@ -339,5 +501,8 @@ main{
 }
 
 .opinion{
-    margin: 100px 400px 100px 400px;
+    margin: 50px 10px 50px 10px;
+    grid-area: opinion;
+    justify-self: center;
+    align-self: center;
 }
