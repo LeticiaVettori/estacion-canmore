@@ -498,24 +498,7 @@ main{
     align-self: center;
 }
 
-.opinion a{
-    background: rgba(255,255,255,0.25);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 0px;
-    color: black;
-    font-family: 'Comfortaa', cursive;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    padding: 20px;
-    border: 1px solid gray;
-}
-
 .opinion{
-    margin: 50px 10px 50px 10px;
     grid-area: opinion;
     justify-self: center;
     align-self: center;
@@ -837,7 +820,7 @@ transform: scale(1);
     .logo img{
         width: 100px;
         height: 75px;
-        top: -25px;
+        top: -10px;
     }
 
     .nav-bar a{
@@ -955,8 +938,4 @@ transform: scale(1);
     .formulario{
         font-size: 10px;
     }
-
-
-
-
 }
