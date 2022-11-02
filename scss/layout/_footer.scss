@@ -1,0 +1,49 @@
+footer{
+    @include vidrio;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 50px 10px 50px;
+    grid-area: footer;
+}
+
+.container-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ubicacion redes"
+    ;
+}
+
+.ubicacion{
+    grid-area: ubicacion;
+    display: flex;
+        a{
+            @include font (12px, bold);
+            color: $texto-coloroscuro;
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+        }
+}
+
+.redes{
+    @include font (12px, bold);
+    color: $texto-coloroscuro;
+    grid-area: redes;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+        img{
+            width: 25px;
+            height: 25px;
+        }
+}

@@ -1,0 +1,104 @@
+.container-menu{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "menu1 menu2 menu3 menu4"
+    "menu5 menu6 menu7 menu8"
+    "none menu9 menu10 non"
+    ;
+}
+
+.menu-1{
+    grid-area: menu1;
+}
+.menu-2{
+    grid-area: menu2;
+}
+.menu-3{
+    grid-area: menu3;
+}
+.menu-4{
+    grid-area: menu4;
+}
+.menu-5{
+    grid-area: menu5;
+}
+.menu-6{
+    grid-area: menu6;
+}
+.menu-7{
+    grid-area: menu7;
+}
+.menu-8{
+    grid-area: menu8;
+}
+.menu-9{
+    grid-area: menu9;
+}
+.menu-10{
+    grid-area: menu10;
+}
+
+.menu{
+    margin: 20px 50px 20px 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    a{
+        @include font (15px, bold);
+        color: $texto-colorclaro;
+        list-style: none;
+        text-decoration: none;
+    }
+    img{
+        width: 215px;
+        height: 150px;
+    }
+}
+
+.burgers{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.papas{
+    @extend .burgers;
+}
+
+.sandwiches{
+    @extend .burgers;
+}
+
+.parapicar{
+    @extend .burgers;
+}
+
+.platos{
+    @extend .burgers;
+}
+
+.ensaladas{
+    @extend .burgers;
+}
+
+.pizzetas{
+    @extend .burgers;
+}
+
+.tablas{
+    @extend .burgers;
+}
+
+.tragos{
+    @extend .burgers;
+}
+
+.bebidasycafeteria{
+    @extend .burgers;
+    top: 20%;
+}

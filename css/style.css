@@ -1,941 +1,613 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Lexend:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Lexend:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
-/**
-font-family: 'Comfortaa', cursive;
-font-family: 'Lexend', sans-serif;
-*/
+body {
+  background-image: url(../img/fondooxido.jpg); }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+.container-grid {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 7fr 1fr;
+  grid-template-areas: "header" "main" "footer"; }
 
-body{
-    background-image: url(../img/fondooxido.jpg);
-}
+main {
+  grid-area: main; }
 
-.container-grid{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 7fr 1fr;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-}
+header {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  margin: 40px 50px 40px 50px;
+  grid-area: header; }
 
-.logo img{
+.container-header {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo titulos";
+  align-items: center; }
+
+.logo {
+  display: flex;
+  grid-area: logo; }
+  .logo img {
     width: 200px;
-    height: 150px;
-    position: absolute;
-    top: -48px;
-}
+    height: 150px; }
+  .logo:hover {
+    -webkit-animation: rotate-scale-up 0.65s linear both;
+    animation: rotate-scale-up 0.65s linear both; }
 
-.logo{
-    display: flex;
-    grid-area: logo;
-}
+ul li {
+  list-style: none; }
 
-.logo:hover{
-	-webkit-animation: rotate-scale-up 0.65s linear both;
-	animation: rotate-scale-up 0.65s linear both;
-}
-
-header{
-    background: rgba(255,255,255,0.25);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 0px;
-    padding: 10px 20px 10px 20px;
-    margin: 40px 50px 40px 50px;
-    grid-area: header;
-}
-
-.nav-bar a{
-    color: black;
+.nav-bar {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: titulos; }
+  .nav-bar a {
+    font-family: 'Comfortaa', cursive;
     font-size: 15px;
-    font-family: 'Comfortaa', cursive;
     font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-bar{
-    display: flex;
-    gap: 30px;
-    justify-content: flex-end;
-    align-items: center;
-    grid-area: titulos;
-}
-
-.nav-bar li:hover{
-    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-ul li{
-    list-style: none;
-}
-
-.container-header{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "logo titulos";
-    align-items: center;
-}    
-
-.spotify{
-    background: rgba(255,255,255,0.25);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 0px;
-    height: 90px;
-    width: 280px;
-    margin: 10px 10px 10px 50px;
-    border: 1px solid gray;
-    padding: 10px 15px 10px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.spotify a{
-    text-decoration: none;
-    list-style: none;
     color: black;
-    font-weight: bold;
+    text-decoration: none; }
+  .nav-bar li:hover {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+/*ANIMACIONES*/
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0); }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg); }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg); } }
+
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0); }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg); }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg); } }
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+footer {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 50px 10px 50px;
+  grid-area: footer; }
+
+.container-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "ubicacion redes"; }
+
+.ubicacion {
+  grid-area: ubicacion;
+  display: flex; }
+  .ubicacion a {
     font-family: 'Comfortaa', cursive;
-    font-size: 25px;
-    display: flex;
-    gap: 30px;
-}
-
-.spotify img{
-    width: 60px;
-    height: 60px;
-    display: flex;
-}
-
-.spotify:hover{
-    -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-
-.container-spotify{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    list-style: none;
     display: flex;
     align-items: center;
-}
-
-footer{
-    background: rgba(255,255,255,0.25);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 0px;
-    padding: 10px 20px 10px 20px;
-    margin: 10px 50px 10px 50px;
-    grid-area: footer;
-}
-
-.container-footer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "ubicacion redes";
-}
-
-.ubicacion img{
+    gap: 10px; }
+  .ubicacion img {
     width: 20px;
     height: 20px;
     display: flex;
-    align-items: center;
-}
+    align-items: center; }
 
-.ubicacion a{
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    font-weight: bold;
-    font-family: 'Comfortaa', cursive;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.ubicacion{
-    grid-area: ubicacion;
-    display: flex;
-}
-
-.redes{
-    color: black;
-    font-weight: bold;
-    font-family: 'Comfortaa', cursive;
-    font-size: 12px;
-    grid-area: redes;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-}
-
-.redes img{
+.redes {
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  grid-area: redes;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px; }
+  .redes img {
     width: 25px;
-    height: 25px;
-}
+    height: 25px; }
 
-main{
-    grid-area: main;
-}
+.container-spotify {
+  display: flex;
+  align-items: center; }
 
-.menu img{
-    width: 215px;
-    height: 150px;
-}
-
-.menu a{
-    list-style: none;
+.spotify {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  width: 280px;
+  height: 90px;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 10px 10px 50px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .spotify a {
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
     text-decoration: none;
-    color: white;
+    list-style: none;
+    display: flex;
+    gap: 30px; }
+  .spotify img {
+    width: 60px;
+    height: 60px;
+    display: flex; }
+  .spotify:hover {
+    -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+/*ANIMACIONES*/
+@-webkit-keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg); }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg); }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); } }
+
+@keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg); }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg); }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); } }
+
+.container-menu {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "menu1 menu2 menu3 menu4" "menu5 menu6 menu7 menu8" "none menu9 menu10 non"; }
+
+.menu-1 {
+  grid-area: menu1; }
+
+.menu-2 {
+  grid-area: menu2; }
+
+.menu-3 {
+  grid-area: menu3; }
+
+.menu-4 {
+  grid-area: menu4; }
+
+.menu-5 {
+  grid-area: menu5; }
+
+.menu-6 {
+  grid-area: menu6; }
+
+.menu-7 {
+  grid-area: menu7; }
+
+.menu-8 {
+  grid-area: menu8; }
+
+.menu-9 {
+  grid-area: menu9; }
+
+.menu-10 {
+  grid-area: menu10; }
+
+.menu {
+  margin: 20px 50px 20px 50px;
+  position: relative;
+  display: inline-block;
+  text-align: center; }
+  .menu a {
     font-family: 'Comfortaa', cursive;
     font-size: 15px;
     font-weight: bold;
-}
-
-.menu{
-    margin: 20px 50px 20px 50px;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-
-.burgers{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.papas{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.sandwiches{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.parapicar{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.platos{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ensaladas{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.pizzetas{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.tablas{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.tragos{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.bebidasycafeteria{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.container-menu{
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "menu1 menu2 menu3 menu4"
-    "menu5 menu6 menu7 menu8"
-    "none menu9 menu10 non"
-    ;
-}
-
-.menu-1{
-    grid-area: menu1;
-}
-.menu-2{
-    grid-area: menu2;
-}
-.menu-3{
-    grid-area: menu3;
-}
-.menu-4{
-    grid-area: menu4;
-}
-.menu-5{
-    grid-area: menu5;
-}
-.menu-6{
-    grid-area: menu6;
-}
-.menu-7{
-    grid-area: menu7;
-}
-.menu-8{
-    grid-area: menu8;
-}
-.menu-9{
-    grid-area: menu9;
-}
-.menu-10{
-    grid-area: menu10;
-}
-
-.nuestras-cervezas img{
-    width: 410px;
-    height: 580px;
-}
-
-.nuestras-cervezas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 70px 50px 50px 50px;
-}
-
-.galeria img{
-    width: 300px;
-    height: 200px;
-}
-
-.galeria a{
-    list-style: none;
-    text-decoration: none;
     color: white;
+    list-style: none;
+    text-decoration: none; }
+  .menu img {
+    width: 215px;
+    height: 150px; }
+
+.burgers, .papas, .sandwiches, .parapicar, .platos, .ensaladas, .pizzetas, .tablas, .tragos, .bebidasycafeteria, .tragosycervezas, .comidas, .ustedes, .laestacion {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.bebidasycafeteria {
+  top: 20%; }
+
+.nuestras-cervezas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 10px 10px 10px; }
+  .nuestras-cervezas img {
+    width: 410px;
+    height: 580px; }
+
+.container-galeria {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "galeria1 galeria2" "galeria3 galeria4"; }
+
+.galeria-1 {
+  grid-area: galeria1; }
+
+.galeria-2 {
+  grid-area: galeria2; }
+
+.galeria-3 {
+  grid-area: galeria3; }
+
+.galeria-4 {
+  grid-area: galeria4; }
+
+.galeria {
+  margin: 20px 50px 20px 50px;
+  position: relative;
+  display: inline-block;
+  text-align: center; }
+  .galeria a {
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
     font-weight: bold;
-}
+    color: white;
+    list-style: none;
+    text-decoration: none; }
+  .galeria img {
+    width: 300px;
+    height: 200px; }
 
-.galeria{
-    margin: 20px 50px 20px 50px;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
+.container-nosotros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30% 10% 20% 20% 10%;
+  grid-template-areas: "texto" "horarios" "formulario" "opinion" "slogan"; }
 
-.fotos-galeria img{
-    width: 200px;
-    height: 150px;
-    margin: 50px 50px 0px 50px;
-}
+.texto-nosotros {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  width: 500px;
+  height: 150px;
+  padding: 20px;
+  margin: 50px 10px 50px 10px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  grid-area: texto;
+  justify-self: center; }
 
-.container-galeria{
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "galeria1 galeria2"
-    "galeria3 galeria4"
-    ;
-}
+.horarios, .slogan, .formulario {
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 50px 10px 50px 10px;
+  text-align: center;
+  grid-area: horarios;
+  justify-self: center;
+  align-self: center; }
 
-.galeria-1{
-    grid-area: galeria1;
-}
+.slogan {
+  grid-area: slogan; }
 
-.galeria-2{
-    grid-area: galeria2;
-}
+.formulario {
+  font-size: 20px;
+  grid-area: formulario; }
 
-.galeria-3{
-    grid-area: galeria3;
-}
-
-.galeria-4{
-    grid-area: galeria4;
-}
-
-.tragosycervezas{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.comidas{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ustedes{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.laestacion{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.container-nosotros{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30% 10% 20% 20% 10%;
-    grid-template-areas: 
-    "texto"
-    "horarios"
-    "formulario"
-    "opinion"
-    "slogan"
-    ;
-}
-
-.texto-nosotros{
-    background: rgba(255,255,255,0.25);
-    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+.opinion {
+  margin: 50px 10px 50px 10px;
+  grid-area: opinion;
+  justify-self: center;
+  align-self: center; }
+  .opinion a {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 0px;
-    padding: 20px;
-    margin: 50px 10px 50px 10px;
+    border-radius: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    font-weight: bold;
     color: black;
-    font-family: 'Comfortaa', cursive;
-    font-size: 16px;
-    font-weight: bold;
     text-align: center;
-    border: 1px solid gray;
-    height: 150px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 25px;
-    grid-area: texto;
-    justify-self: center;
-}
-
-.horarios{
-    margin: 50px 10px 50px 10px;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    grid-area: horarios;
-    justify-self: center;
-    align-self: center;
-}
-
-.slogan{
-    margin: 50px 10px 50px 10px;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    grid-area: slogan;
-    justify-self: center;
-    align-self: center;
-}
-
-.formulario{
-    margin: 50px 10px 50px 10px;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    grid-area: formulario;
-    justify-self: center;
-    align-self: center;
-}
-
-.opinion{
-    grid-area: opinion;
-    justify-self: center;
-    align-self: center;
-}
-
-.opinion:hover{
+    text-decoration: none;
+    padding: 20px;
+    border: 1px solid gray; }
+  .opinion:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-    animation: heartbeat 1.5s ease-in-out infinite both;
-}
+    animation: heartbeat 1.5s ease-in-out infinite both; }
 
-
-        /*ANIMACIONES*/
-
-
-@-webkit-keyframes rotate-scale-up {
-    0% {
-    -webkit-transform: scale(1) rotateZ(0);
-    transform: scale(1) rotateZ(0);
-    }
-    50% {
-    -webkit-transform: scale(2) rotateZ(180deg);
-    transform: scale(2) rotateZ(180deg);
-    }
-    100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-    transform: scale(1) rotateZ(360deg);
-    }
-}
-@keyframes rotate-scale-up {
-    0% {
-    -webkit-transform: scale(1) rotateZ(0);
-    transform: scale(1) rotateZ(0);
-    }
-    50% {
-    -webkit-transform: scale(2) rotateZ(180deg);
-    transform: scale(2) rotateZ(180deg);
-    }
-    100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-    transform: scale(1) rotateZ(360deg);
-    }
-}
-
-@-webkit-keyframes shake-bottom {
-    0%,
-    100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    }
-    10% {
-    -webkit-transform: rotate(2deg);
-    transform: rotate(2deg);
-    }
-    20%,
-    40%,
-    60% {
-    -webkit-transform: rotate(-4deg);
-    transform: rotate(-4deg);
-    }
-    30%,
-    50%,
-    70% {
-    -webkit-transform: rotate(4deg);
-    transform: rotate(4deg);
-    }
-    80% {
-    -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-    }
-    90% {
-    -webkit-transform: rotate(2deg);
-    transform: rotate(2deg);
-    }
-}
-@keyframes shake-bottom {
-    0%,
-    100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    }
-    10% {
-    -webkit-transform: rotate(2deg);
-    transform: rotate(2deg);
-    }
-    20%,
-    40%,
-    60% {
-    -webkit-transform: rotate(-4deg);
-    transform: rotate(-4deg);
-    }
-    30%,
-    50%,
-    70% {
-    -webkit-transform: rotate(4deg);
-    transform: rotate(4deg);
-    }
-    80% {
-    -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-    }
-    90% {
-    -webkit-transform: rotate(2deg);
-    transform: rotate(2deg);
-    }
-}
-
+/*ANIMACIONES*/
 @-webkit-keyframes heartbeat {
-    from {
+  from {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transform-origin: center center;
     transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    10% {
+    animation-timing-function: ease-out; }
+  10% {
     -webkit-transform: scale(0.91);
     transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    17% {
+    animation-timing-function: ease-in; }
+  17% {
     -webkit-transform: scale(0.98);
     transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    33% {
+    animation-timing-function: ease-out; }
+  33% {
     -webkit-transform: scale(0.87);
     transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    45% {
+    animation-timing-function: ease-in; }
+  45% {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-}
+    animation-timing-function: ease-out; } }
+
 @keyframes heartbeat {
-    from {
+  from {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transform-origin: center center;
     transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    10% {
+    animation-timing-function: ease-out; }
+  10% {
     -webkit-transform: scale(0.91);
     transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    17% {
+    animation-timing-function: ease-in; }
+  17% {
     -webkit-transform: scale(0.98);
     transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    33% {
+    animation-timing-function: ease-out; }
+  33% {
     -webkit-transform: scale(0.87);
     transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    45% {
+    animation-timing-function: ease-in; }
+  45% {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-}
+    animation-timing-function: ease-out; } }
 
-@-webkit-keyframes scale-up-center {
-    0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    }
-    100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    }
-}
-@keyframes scale-up-center {
-    0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    }
-    100% {
-    -webkit-transform: scale(1);
-transform: scale(1);
-    }
-}
+.fotos-galeria img {
+  width: 200px;
+  height: 150px;
+  padding: none;
+  margin: 50px 50px 0px 50px; }
 
+@media (max-width: 768px) {
+  .logo img {
+    width: 150px;
+    height: 115px;
+    top: -25px; }
+  .nav-bar a {
+    font-size: 10px; }
+  .spotify {
+    height: 70px;
+    width: 210px; }
+    .spotify a {
+      font-size: 20px;
+      gap: 20px; }
+    .spotify img {
+      width: 45px;
+      height: 45px; }
+  .ubicacion a {
+    font-size: 10px; }
+  .ubicacion img {
+    width: 15px;
+    height: 15px; }
+  .redes {
+    font-size: 10px; }
+  .redes img {
+    width: 20px;
+    height: 20px; }
+  .container-menu {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "menu1 menu2 menu3" "menu4 menu5 menu6" "menu7 menu8 menu9" "none menu10 non"; }
+  .menu a {
+    font-size: 10px; }
+  .menu img {
+    width: 110px;
+    height: 80px; }
+  .nuestras-cervezas img {
+    width: 310px;
+    height: 435px; }
+  .galeria a {
+    font-size: 15px; }
+  .galeria img {
+    width: 200px;
+    height: 150px; }
+  .fotos-galeria img {
+    width: 150px;
+    height: 100px; }
+  .texto-nosotros {
+    width: 375px;
+    height: 100px;
+    font-size: 12px;
+    line-height: 18px; }
+  .horarios, .slogan, .formulario {
+    font-size: 14px; }
+  .slogan {
+    font-size: 14px; }
+  .opinion a {
+    font-size: 20px; }
+  .formulario {
+    font-size: 15px; } }
 
-        /*MEDIA QUERIE*/
-
-
-    /*TABLET*/
-
-@media (max-width:768px){
-    .logo img{
-        width: 150px;
-        height: 115px;
-        top: -25px;
-    }
-
-    .nav-bar a{
-        font-size: 10px;
-    }
-
-    .spotify{
-        height: 70px;
-        width: 210px;
-    }
-
-    .spotify a{
-        font-size: 20px;
-        gap: 20px;
-    }
-
-    .spotify img{
-        width: 45px;
-        height: 45px;
-    }
-
-    .ubicacion img{
-        width: 15px;
-        height: 15px;
-    }
-
-    .ubicacion a{
-        font-size: 10px;
-    }
-
-    .redes{
-        font-size: 10px;
-    }
-
-    .redes img{
-        width: 20px;
-        height: 20px;
-    }
-
-    .container-menu{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: 
-        "menu1 menu2 menu3"
-        "menu4 menu5 menu6"
-        "menu7 menu8 menu9"
-        "none menu10 non"
-        ;
-    }
-
-    .menu img{
-        width: 110px;
-        height: 80px;
-    }
-
-    .menu a{
-        font-size: 10px;
-    }
-    
-    .nuestras-cervezas img{
-        width: 310px;
-        height: 435px;
-    }
-
-    .galeria img{
-        width: 200px;
-        height: 150px;
-    }
-
-    .galeria a{
-        font-size: 15px;
-    }
-
-    .fotos-galeria img{
-        width: 150px;
-        height: 100px;
-    }
-
-    .texto-nosotros{
-        width: 375px;
-        height: 100px;
-        font-size: 12px;
-        line-height: 18px;
-    }
-
-    .horarios{
-        font-size: 14px;
-    }
-
-    .slogan{
-        font-size: 14px;
-    }
-
-    .opinion a{
-        font-size: 20px;
-    }
-
-    .formulario{
-        font-size: 15px;
-    }
-}
-
-
-    /*MOBILE*/
-
-
-@media (max-width: 576px){
-    .logo img{
-        width: 100px;
-        height: 75px;
-        top: -10px;
-    }
-
-    .nav-bar a{
-        font-size: 7px;
-    }
-
-    .spotify{
-        height: 45px;
-        width: 140px;
-    }
-
-    .spotify a{
-        font-size: 10px;
-        gap: 15px;
-    }
-
-    .spotify img{
-        width: 25px;
-        height: 25px;
-    }
-
-    .ubicacion img{
-        width: 10px;
-        height: 10px;
-    }
-
-    .ubicacion a{
-        font-size: 6px;
-    }
-
-    .redes{
-        font-size: 6px;
-    }
-
-    .redes img{
-        width: 12px;
-        height: 12px;
-    }
-
-    .container-menu{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(10, 1fr);
-        grid-template-areas: 
-        "menu1"
-        "menu2"
-        "menu3"
-        "menu4"
-        "menu5"
-        "menu6"
-        "menu7"
-        "menu8"
-        "menu9"
-        "menu10"
-        ;
-    }
-
-    .menu img{
-        width: 100px;
-        height: 50px;
-    }
-
-    .menu a{
-        font-size: 7px;
-    }
-    
-    .nuestras-cervezas img{
-        width: 200px;
-        height: 290px;
-    }
-
-    .container-galeria{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: 
-        "galeria1" 
-        "galeria2"
-        "galeria3"
-        "galeria4"
-        ;
-    }
-
-    .galeria img{
-        width: 150px;
-        height: 100px;
-    }
-
-    .galeria a{
-        font-size: 10px;
-    }
-
-    .fotos-galeria img{
-        width: 100px;
-        height: 75px;
-    }
-
-    .texto-nosotros{
-        width: 250px;
-        height: 75px;
-        font-size: 8px;
-        line-height: 10px;
-    }
-
-    .horarios{
-        font-size: 9px;
-    }
-
-    .slogan{
-        font-size: 9px;
-    }
-
-    .opinion a{
-        font-size: 15px;
-    }
-
-    .formulario{
-        font-size: 10px;
-    }
-}
+@media (max-width: 576px) {
+  .logo img {
+    width: 100px;
+    height: 75px; }
+  .nav-bar {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-end; }
+  .nav-bar a {
+    font-size: 10px; }
+  .spotify {
+    height: 45px;
+    width: 140px; }
+    .spotify a {
+      font-size: 10px;
+      gap: 15px; }
+    .spotify img {
+      width: 25px;
+      height: 25px; }
+  .ubicacion img {
+    width: 12px;
+    height: 12px; }
+  .ubicacion a {
+    font-size: 8px; }
+  .redes {
+    font-size: 8px; }
+    .redes img {
+      width: 14px;
+      height: 14px; }
+  .container-menu {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: "menu1" "menu2" "menu3" "menu4" "menu5" "menu6" "menu7" "menu8" "menu9" "menu10"; }
+  .menu img {
+    width: 150px;
+    height: 75px; }
+  .menu a {
+    font-size: 10px; }
+  .nuestras-cervezas img {
+    width: 200px;
+    height: 290px; }
+  .container-galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "galeria1"  "galeria2" "galeria3" "galeria4"; }
+  .galeria img {
+    width: 200px;
+    height: 125px; }
+  .galeria a {
+    font-size: 15px; }
+  .fotos-galeria img {
+    width: 100px;
+    height: 75px; }
+  .texto-nosotros {
+    width: 250px;
+    height: 75px;
+    font-size: 9px;
+    line-height: 10px; }
+  .horarios, .slogan, .formulario {
+    font-size: 10px; }
+  .slogan {
+    font-size: 10px; }
+  .opinion a {
+    font-size: 15px; }
+  .formulario {
+    font-size: 10px; } }

@@ -1,0 +1,101 @@
+.container-spotify{
+    display: flex;
+    align-items: center;
+}
+
+.spotify{
+    @include vidrio;
+    @include medidas (280px, 90px, 10px 15px 10px 15px, 10px 10px 10px 50px);
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        a{
+            @include font (25px, bold);
+            color: $texto-coloroscuro;
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        img{
+            width: 60px;
+            height: 60px;
+            display: flex;
+        }
+        &:hover{
+            -webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;        
+        }
+}
+
+        /*ANIMACIONES*/
+
+@-webkit-keyframes shake-bottom {
+    0%,
+    100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    }
+    10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+    }
+    80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    }
+    90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    }
+}
+@keyframes shake-bottom {
+    0%,
+    100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    }
+    10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+    }
+    80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    }
+    90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    }
+}
+
+

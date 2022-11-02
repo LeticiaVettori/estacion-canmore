@@ -1,0 +1,60 @@
+.container-galeria{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "galeria1 galeria2"
+    "galeria3 galeria4"
+    ;
+}
+
+.galeria-1{
+    grid-area: galeria1;
+}
+
+.galeria-2{
+    grid-area: galeria2;
+}
+
+.galeria-3{
+    grid-area: galeria3;
+}
+
+.galeria-4{
+    grid-area: galeria4;
+}
+
+.galeria{
+    margin: 20px 50px 20px 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+        a{
+            @include font (20px, bold);
+            color: $texto-colorclaro;
+            list-style: none;
+            text-decoration: none;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+}
+
+.tragosycervezas{
+    @extend .burgers;
+}
+
+.comidas{
+    @extend .burgers;
+}
+
+.ustedes{
+    @extend .burgers;
+}
+
+.laestacion{
+    @extend .burgers;
+}
