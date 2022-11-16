@@ -1,26 +1,65 @@
 @media (max-width: 576px){
+
+    header{
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    .container-fluid{
+        padding: 0px;
+    }
+
     .logo img{
         width: 100px;
         height: 75px;
     }
 
-
-
-.nav-bar{
-    flex-direction: column;
-    gap: 2px;
-    align-items: flex-end;
-}
-
-
+    .nav-bar{
+        flex-direction: column;
+        gap: 2px;
+        align-items: flex-end;
+    }
 
     .nav-bar a{
         font-size: 10px;
     }
 
+    .container-index{
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 10% 50% 20%;
+        grid-template-areas: 
+        "h1"
+        "h2"
+        "imagen"
+        "spotify"
+        ;
+    }
+
+    h1{
+        font-size: 20px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    h2{
+        font-size: 10px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    .imagen-index{
+        margin: 25px 0px 25px 0px; 
+        img{
+            width: 180px;
+            height: 140px;
+        }
+    }
+
     .spotify{
         height: 45px;
         width: 140px;
+        margin: 15px 0px 15px 0px;
         a{
             font-size: 10px;
             gap: 15px;
@@ -29,6 +68,11 @@
             width: 25px;
             height: 25px;
         }
+    }
+
+    footer{
+        margin: 0px;
+        border-radius: 0px;
     }
 
     .ubicacion img{
@@ -66,12 +110,12 @@
     }
 
     .menu img{
-        width: 150px;
-        height: 75px;
+        width: 180px;
+        height: 100px;
     }
 
     .menu a{
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .nuestras-cervezas img{
@@ -99,24 +143,26 @@
         font-size: 15px;
     }
 
-    .fotos-galeria img{
-        width: 100px;
-        height: 75px;
+    .carrusel{
+        margin: 20px 70px 20px 70px;
+        img{
+            height: 300px;
+        }
     }
 
     .texto-nosotros{
-        width: 250px;
-        height: 75px;
-        font-size: 9px;
-        line-height: 10px;
+        width: 275px;
+        height: 100px;
+        font-size: 10px;
+        line-height: 12px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .horarios{
         font-size: 10px;
-    }
-
-    .slogan{
-        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .opinion a{
@@ -124,6 +170,19 @@
     }
 
     .formulario{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:720px){
+    
+    .nav-bar{
+        flex-direction: column;
+        gap: 2px;
+        align-items: flex-end;
+    }
+
+    .nav-bar a{
         font-size: 10px;
     }
 }

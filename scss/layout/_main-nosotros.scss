@@ -1,19 +1,18 @@
 .container-nosotros{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30% 10% 20% 20% 10%;
+    grid-template-rows: 40% 10% 25% 25%;
     grid-template-areas: 
     "texto"
     "horarios"
     "formulario"
     "opinion"
-    "slogan"
     ;
 }
 
 .texto-nosotros{
     @include vidrio;
-    @include medidas (500px, 150px, 20px, 50px 10px 50px 10px);
+    @include medidas (500px, 200px, 0px 10px 0px 10px, 30px 10px 30px 10px);
     @include font (16px, bold);
     color: $texto-coloroscuro;
     text-align: center;
@@ -21,24 +20,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 25px;
+    line-height: 30px;
     grid-area: texto;
     justify-self: center;
+    p{
+        margin-bottom: 0px;
+    }
 }
 
 .horarios{
     @include font (18px, bold);
     color: $texto-colorclaro;
-    margin: 50px 10px 50px 10px;
+    margin: 30px 10px 30px 10px;
     text-align: center;
     grid-area: horarios;
     justify-self: center;
     align-self: center;
-}
-
-.slogan{
-    @extend .horarios;
-    grid-area: slogan;
 }
 
 .formulario{
