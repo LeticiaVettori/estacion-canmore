@@ -175,14 +175,3 @@
     }
 }
 
-@media (max-width:720px){
-
-    .nav-bar{
-        flex-direction: column;
-        gap: 2px;
-        align-items: flex-end;
-        a{
-        font-size: 10px;
-        }
-    }
-}
